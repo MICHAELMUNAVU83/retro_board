@@ -35,6 +35,7 @@ defmodule RetroBoard.MixProject do
     [
       {:phoenix, "~> 1.6.15"},
       {:phoenix_ecto, "~> 4.4"},
+      {:tailwind, "~> 0.1", runtime: Mix.env() == :dev},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.0"},
@@ -64,7 +65,8 @@ defmodule RetroBoard.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.deploy": ["esbuild default --minify", "phx.digest"]
+
+      "assets.deploy": ["tailwind default --minify", "esbuild default --minify", "phx.digest"]
     ]
   end
 end
