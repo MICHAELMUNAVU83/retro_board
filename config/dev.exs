@@ -2,6 +2,8 @@ import Config
 
 # Configure your database
 config :retro_board, RetroBoard.Repo,
+  username: "root",
+  password: "Michael@11",
   hostname: "localhost",
   database: "retro_board_dev",
   stacktrace: true,

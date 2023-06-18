@@ -37,7 +37,7 @@ defmodule RetroBoard.MixProject do
       {:phoenix_ecto, "~> 4.4"},
       {:tailwind, "~> 0.1", runtime: Mix.env() == :dev},
       {:ecto_sql, "~> 3.6"},
-      {:postgrex, ">= 0.0.0"},
+      {:myxql, ">= 0.0.0"},
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_live_view, "~> 0.17.5"},
